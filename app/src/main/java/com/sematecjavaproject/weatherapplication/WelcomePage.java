@@ -5,13 +5,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
-import android.widget.Toast;
-
-import java.net.InetAddress;
-import java.net.UnknownHostException;
+import android.view.View;
+import android.widget.TextView;
 
 public class WelcomePage extends AppCompatActivity {
 
@@ -22,7 +21,18 @@ public class WelcomePage extends AppCompatActivity {
         if (!isConnected(WelcomePage.this))
             buildDialog(WelcomePage.this).show();
         else
-            setContentView(R.layout.welcome_page);
+            setContentView(R.layout.activity_welcome_page);
+
+        View btnTapToContinue = findViewById(R.id.btnTapToContinue);
+
+        btnTapToContinue.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent goToCurrentLocationWeatherActivity = new Intent(WelcomePage.this,CurrentLoacationWeatherActivity.class);
+                startActivity(goToCurrentLocationWeatherActivity);
+            }
+        });
     }
 
     public boolean isConnected(Context context) {

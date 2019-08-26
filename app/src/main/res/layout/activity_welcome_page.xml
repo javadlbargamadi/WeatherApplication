@@ -12,10 +12,10 @@
         android:scaleType="centerCrop"
         android:src="@drawable/welcomepage" />
 
-    <TextView
-        android:id="@+id/txtContinue"
+    <View
+        android:layout_marginTop="150dp"
+        android:id="@+id/btnTapToContinue"
         android:layout_width="match_parent"
-        android:layout_height="54dp"
-        android:layout_marginTop="410dp"
-        android:textSize="30sp" />
+        android:layout_height="400dp"
+        android:textSize="40sp" />
 </RelativeLayout>
