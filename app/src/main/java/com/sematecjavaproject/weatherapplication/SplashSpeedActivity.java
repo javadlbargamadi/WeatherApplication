@@ -47,7 +47,7 @@ public class SplashSpeedActivity extends AppCompatActivity {
                     startActivity(splashSpeedToMainActivity);
                     finish();
                 }
-            }, 6700);
+            }, 7000);
 
         }
 
