@@ -88,8 +88,109 @@
                         </androidx.cardview.widget.CardView>
                     </LinearLayout>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
                     <LinearLayout
                         android:layout_marginTop="5dp"
+                        android:weightSum="15"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal"
+                        android:layout_width="fill_parent"
+                        android:layout_height="200dp">
+
+                        <LinearLayout
+                            android:weightSum="4"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="6"
+                            android:orientation="vertical"
+                            android:layout_width="0dp"
+                            android:layout_height="fill_parent">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_weight="2"
+                                android:layout_marginLeft="5dp"
+                                app:cardCornerRadius="15dp"
+                                app:cardBackgroundColor="#bdbdbd"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp">
+
+                                <TextView
+                                    android:textAllCaps="true"
+                                    android:gravity="center"
+                                    android:textColor="#000"
+                                    android:textSize="20sp"
+                                    android:text="clear"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"/>
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_marginBottom="5dp"
+                                android:layout_weight="2"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginLeft="5dp"
+                                app:cardCornerRadius="15dp"
+                                app:cardBackgroundColor="#bdbdbd"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp">
+
+                                <TextView
+                                    android:textAllCaps="true"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:textColor="#000"
+                                    android:text="Light rain and snow	"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"/>
+                            </androidx.cardview.widget.CardView>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_weight="9"
+                            android:orientation="vertical"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent">
+
+                            <androidx.cardview.widget.CardView
+                                app:cardBackgroundColor="#bdbdbd"
+                                android:layout_margin="5dp"
+                                app:cardCornerRadius="15dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:gravity="center"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"/>
+                            </androidx.cardview.widget.CardView>
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <LinearLayout
                         android:weightSum="15"
                         android:layout_gravity="center"
                         android:orientation="horizontal"
@@ -169,6 +270,79 @@
                         </LinearLayout>
                     </LinearLayout>
 
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp">
+
+
+
+
+
+
+
+
+
+
+
+
+                        <LinearLayout
+                            android:weightSum="15"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_weight="6"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginLeft="5dp"
+                                app:cardBackgroundColor="#bdbdbd"
+                                app:cardCornerRadius="20dp"
+                                android:layout_width="0dp"
+                                android:layout_height="40dp">
+
+                                <TextView
+                                    android:gravity="center"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="Wind Speed"
+                                    android:textColor="#000"
+                                    android:textSize="20sp" />
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_marginRight="5dp"
+                                android:layout_weight="9"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginLeft="5dp"
+                                app:cardBackgroundColor="#bdbdbd"
+                                app:cardCornerRadius="20dp"
+                                android:layout_width="0dp"
+                                android:layout_height="40dp">
+
+                                <TextView
+                                    android:gravity="center"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="999 m/s"
+                                    android:textColor="#000"
+                                    android:textSize="22sp" />
+                            </androidx.cardview.widget.CardView>
+                        </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+                    </LinearLayout>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
