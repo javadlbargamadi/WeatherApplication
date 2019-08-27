@@ -9,30 +9,48 @@ import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.TextView;
+import android.os.Handler;
+import android.widget.Toast;
 
-public class WelcomePage extends AppCompatActivity {
+public class SplashSpeedActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        if (!isConnected(WelcomePage.this))
-            buildDialog(WelcomePage.this).show();
-        else
-            setContentView(R.layout.activity_welcome_page);
+        if (!isConnected(SplashSpeedActivity.this))
+            buildDialog(SplashSpeedActivity.this).show();
+        else {
 
-        View btnTapToContinue = findViewById(R.id.btnTapToContinue);
+            setContentView(R.layout.activity_splash_speed);
 
-        btnTapToContinue.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
 
-                Intent goToCurrentLocationWeatherActivity = new Intent(WelcomePage.this,CurrentLoacationWeatherActivity.class);
-                startActivity(goToCurrentLocationWeatherActivity);
-            }
-        });
+                    Toast.makeText(SplashSpeedActivity.this, "Connecting..", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SplashSpeedActivity.this, "Please wait!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SplashSpeedActivity.this, "You're Welcome", Toast.LENGTH_SHORT).show();
+                }
+            }, 800);
+
+//          Toast.makeText(SplashSpeedActivity.this, "Connecting..Please wait!", Toast.LENGTH_LONG).show();
+//          Toast.makeText(SplashSpeedActivity.this, "Connecting..", Toast.LENGTH_SHORT).show();
+//          Toast.makeText(SplashSpeedActivity.this, "Please wait!", Toast.LENGTH_SHORT).show();
+//          Toast.makeText(SplashSpeedActivity.this, "You're Welcome", Toast.LENGTH_SHORT).show();
+
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+
+                    Intent splashSpeedToMainActivity = new Intent(SplashSpeedActivity.this, CurrentLoacationWeatherActivity.class);
+                    startActivity(splashSpeedToMainActivity);
+                    finish();
+                }
+            }, 6700);
+
+        }
+
     }
 
     public boolean isConnected(Context context) {
@@ -68,22 +86,4 @@ public class WelcomePage extends AppCompatActivity {
 
         return builder;
     }
-
-//    private boolean isNetworkConnected() {
-//
-//        ConnectivityManager connectivityManager = (ConnectivityManager) getSystemService(WelcomePage.CONNECTIVITY_SERVICE);
-//        return connectivityManager.getActiveNetworkInfo() != null & connectivityManager.getActiveNetworkInfo().isConnected();
-//    }
-
-//    public boolean isInternetAvailable() {
-//
-//        try {
-//
-//            InetAddress ipAddr = InetAddress.getByName("google.com");
-//            return !ipAddr.equals("");
-//        } catch (Exception e) {
-//
-//            return false;
-//        }
-//    }
 }
