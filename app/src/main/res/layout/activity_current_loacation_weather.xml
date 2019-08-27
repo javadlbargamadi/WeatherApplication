@@ -6,81 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".CurrentLoacationWeatherActivity">
 
-    <LinearLayout
-        android:layout_width="360dp"
-        android:layout_height="match_parent"
-        android:layout_gravity="left"
-        android:background="#fff"
-        android:orientation="vertical">
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="60dp"
-            android:layout_marginStart="10dp"
-            android:gravity="center"
-            android:orientation="horizontal"
-            android:weightSum="10">
-
-            <ImageView
-                android:layout_width="0dp"
-                android:layout_height="35dp"
-                android:layout_weight="1"
-                android:scaleType="centerCrop"
-                android:src="@drawable/pinpic" />
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/btnChangeCity"
-                android:layout_width="0dp"
-                android:layout_height="50dp"
-                android:layout_marginStart="10dp"
-                android:layout_marginEnd="10dp"
-                android:layout_weight="9"
-                app:cardBackgroundColor="#90caf9"
-                app:cardCornerRadius="10dp">
-
-                <TextView
-                    android:id="@+id/txtChangeCity"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginBottom="5dp"
-                    android:gravity="center_vertical"
-                    android:text="Change City"
-                    android:textColor="#fff"
-                    android:textSize="25sp" />
-            </androidx.cardview.widget.CardView>
-        </LinearLayout>
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="3dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="5dp"
-            android:foreground="#000" />
-
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:layout_marginStart="5dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginEnd="5dp"
-            android:gravity="center"
-            app:cardBackgroundColor="#ff5722"
-            app:cardCornerRadius="10dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="weather"
-                android:textColor="#fff"
-                android:textSize="80sp" />
-        </androidx.cardview.widget.CardView>
-
-    </LinearLayout>
-
-
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -124,5 +49,81 @@
             </androidx.recyclerview.widget.RecyclerView>
         </LinearLayout>
     </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="360dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="left"
+        android:background="#fff"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:gravity="center"
+            app:cardBackgroundColor="#ff5722"
+            app:cardCornerRadius="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="weather"
+                android:textColor="#fff"
+                android:textSize="80sp" />
+        </androidx.cardview.widget.CardView>
+
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:foreground="#000" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_marginStart="10dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="10">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/pinpic" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/btnChangeCity"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="9"
+                    app:cardBackgroundColor="#90caf9"
+                    app:cardCornerRadius="10dp">
+
+                    <TextView
+                        android:id="@+id/txtChangeCity"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:gravity="center_vertical"
+                        android:text="Change City"
+                        android:textColor="#fff"
+                        android:textSize="25sp" />
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+    </LinearLayout>
+
+
 
 </androidx.drawerlayout.widget.DrawerLayout>
