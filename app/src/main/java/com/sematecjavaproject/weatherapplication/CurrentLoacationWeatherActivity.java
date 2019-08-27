@@ -17,8 +17,7 @@ public class CurrentLoacationWeatherActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_current_loacation_weather);
 
-        Toast.makeText(CurrentLoacationWeatherActivity.this, "in down section", Toast.LENGTH_LONG).show();
-        Toast.makeText(CurrentLoacationWeatherActivity.this, "swipe left", Toast.LENGTH_LONG).show();
+        Toast.makeText(CurrentLoacationWeatherActivity.this, "open drawer to change city", Toast.LENGTH_SHORT).show();
 
         TextView txtChangeCity = findViewById(R.id.txtChangeCity);
         TextView textView = findViewById(R.id.txtTest);
@@ -33,10 +32,12 @@ public class CurrentLoacationWeatherActivity extends AppCompatActivity {
             }
         });
 
-
         ItemAdapterActivity itemAdapterActivity = new ItemAdapterActivity();
         recyclerView.setAdapter(itemAdapterActivity);
         recyclerView.setLayoutManager(new LinearLayoutManager(CurrentLoacationWeatherActivity.this, RecyclerView.HORIZONTAL, false));
+
+
+
 
     }
 }

@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CurrentLoacationWeatherActivity">
+    tools:context=".CurrentLoacationWeatherActivity"
+    android:id="@+id/drawerLayout">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -35,6 +36,140 @@
                 app:cardBackgroundColor="#fff"
                 app:cardCornerRadius="20dp">
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:weightSum="15"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_weight="6"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginLeft="5dp"
+                            app:cardBackgroundColor="#ff5722"
+                            app:cardCornerRadius="20dp"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp">
+
+                            <TextView
+                                android:gravity="center"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="Today"
+                                android:textColor="#fff"
+                                android:textSize="20sp" />
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="9"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginLeft="5dp"
+                            app:cardBackgroundColor="#ff5722"
+                            app:cardCornerRadius="20dp"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp">
+
+                            <TextView
+                                android:gravity="center"
+                                android:textAllCaps="true"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="Tehran"
+                                android:textColor="#fff"
+                                android:textSize="20sp" />
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="5dp"
+                        android:weightSum="15"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal"
+                        android:layout_width="fill_parent"
+                        android:layout_height="100dp">
+
+                        <LinearLayout
+                            android:weightSum="4"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="6"
+                            android:orientation="vertical"
+                            android:layout_width="0dp"
+                            android:layout_height="fill_parent">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_weight="2"
+                                android:layout_marginLeft="5dp"
+                                app:cardCornerRadius="20dp"
+                                app:cardBackgroundColor="#2196f3"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp">
+
+                                <TextView
+                                    android:layout_margin="10dp"
+                                    android:gravity="center"
+                                    android:textColor="#fff"
+                                    android:textSize="20sp"
+                                    android:text="min : 99.9 °C"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"/>
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_marginBottom="5dp"
+                                android:layout_weight="2"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginLeft="5dp"
+                                app:cardCornerRadius="20dp"
+                                app:cardBackgroundColor="#f44336"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp">
+
+                                <TextView
+                                    android:layout_gravity="center"
+                                    android:layout_margin="10dp"
+                                    android:gravity="center"
+                                    android:textColor="#fff"
+                                    android:textSize="20sp"
+                                    android:text="max : 99.9 °C"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"/>
+                            </androidx.cardview.widget.CardView>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_weight="9"
+                            android:orientation="vertical"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_margin="5dp"
+                                app:cardCornerRadius="15dp"
+                                app:cardBackgroundColor="#4caf50"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <TextView
+                                    android:layout_margin="7dp"
+                                    android:gravity="center"
+                                    android:textColor="#fff"
+                                    android:textSize="50sp"
+                                    android:text="99.9 °C"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"/>
+                            </androidx.cardview.widget.CardView>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
             </androidx.cardview.widget.CardView>
 
             <androidx.recyclerview.widget.RecyclerView
