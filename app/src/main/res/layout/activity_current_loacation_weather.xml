@@ -42,19 +42,19 @@
                     android:orientation="vertical">
 
                     <LinearLayout
-                        android:weightSum="15"
+                        android:weightSum="10"
                         android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="50dp"
                         android:orientation="horizontal">
 
                         <androidx.cardview.widget.CardView
-                            android:layout_weight="6"
+                            android:layout_weight="5"
                             android:layout_marginTop="5dp"
                             android:layout_marginLeft="5dp"
                             app:cardBackgroundColor="#ff5722"
                             app:cardCornerRadius="20dp"
                             android:layout_width="0dp"
-                            android:layout_height="40dp">
+                            android:layout_height="match_parent">
 
                             <TextView
                                 android:gravity="center"
@@ -68,15 +68,16 @@
 
                         <androidx.cardview.widget.CardView
                             android:layout_marginRight="5dp"
-                            android:layout_weight="9"
+                            android:layout_weight="5"
                             android:layout_marginTop="5dp"
                             android:layout_marginLeft="5dp"
                             app:cardBackgroundColor="#ff5722"
                             app:cardCornerRadius="20dp"
                             android:layout_width="0dp"
-                            android:layout_height="40dp">
+                            android:layout_height="match_parent">
 
                             <TextView
+                                android:id="@+id/txtCity"
                                 android:gravity="center"
                                 android:textAllCaps="true"
                                 android:layout_width="wrap_content"
@@ -103,7 +104,7 @@
 
                     <LinearLayout
                         android:layout_marginTop="5dp"
-                        android:weightSum="15"
+                        android:weightSum="10"
                         android:layout_gravity="center"
                         android:orientation="horizontal"
                         android:layout_width="fill_parent"
@@ -112,7 +113,7 @@
                         <LinearLayout
                             android:weightSum="4"
                             android:layout_marginTop="5dp"
-                            android:layout_weight="6"
+                            android:layout_weight="5"
                             android:orientation="vertical"
                             android:layout_width="0dp"
                             android:layout_height="fill_parent">
@@ -126,6 +127,7 @@
                                 android:layout_height="0dp">
 
                                 <TextView
+                                    android:id="@+id/txtWeatherType"
                                     android:textAllCaps="true"
                                     android:gravity="center"
                                     android:textColor="#000"
@@ -146,6 +148,7 @@
                                 android:layout_height="0dp">
 
                                 <TextView
+                                    android:id="@+id/txtWeatherDescription"
                                     android:textAllCaps="true"
                                     android:layout_gravity="center"
                                     android:gravity="center"
@@ -157,7 +160,7 @@
                         </LinearLayout>
 
                         <LinearLayout
-                            android:layout_weight="9"
+                            android:layout_weight="5"
                             android:orientation="vertical"
                             android:layout_width="0dp"
                             android:layout_height="match_parent">
@@ -170,6 +173,7 @@
                                 android:layout_height="match_parent">
 
                                 <ImageView
+                                    android:id="@+id/imgWeatherIcon"
                                     android:gravity="center"
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"/>
@@ -191,7 +195,7 @@
 
 
                     <LinearLayout
-                        android:weightSum="15"
+                        android:weightSum="10"
                         android:layout_gravity="center"
                         android:orientation="horizontal"
                         android:layout_width="fill_parent"
@@ -200,7 +204,7 @@
                         <LinearLayout
                             android:weightSum="4"
                             android:layout_marginTop="5dp"
-                            android:layout_weight="6"
+                            android:layout_weight="5"
                             android:orientation="vertical"
                             android:layout_width="0dp"
                             android:layout_height="fill_parent">
@@ -214,6 +218,7 @@
                                 android:layout_height="0dp">
 
                                 <TextView
+                                    android:id="@+id/txtMinTemp"
                                     android:layout_margin="10dp"
                                     android:gravity="center"
                                     android:textColor="#fff"
@@ -234,6 +239,7 @@
                                 android:layout_height="0dp">
 
                                 <TextView
+                                    android:id="@+id/txtMaxTemp"
                                     android:layout_gravity="center"
                                     android:layout_margin="10dp"
                                     android:gravity="center"
@@ -246,7 +252,7 @@
                         </LinearLayout>
 
                         <LinearLayout
-                            android:layout_weight="9"
+                            android:layout_weight="5"
                             android:orientation="vertical"
                             android:layout_width="0dp"
                             android:layout_height="match_parent">
@@ -259,6 +265,7 @@
                                 android:layout_height="match_parent">
 
                                 <TextView
+                                    android:id="@+id/txtMainTemp"
                                     android:layout_margin="7dp"
                                     android:gravity="center"
                                     android:textColor="#fff"
@@ -286,19 +293,19 @@
 
 
                         <LinearLayout
-                            android:weightSum="15"
+                            android:weightSum="10"
                             android:layout_width="fill_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="45dp"
                             android:orientation="horizontal">
 
                             <androidx.cardview.widget.CardView
-                                android:layout_weight="6"
+                                android:layout_weight="5"
                                 android:layout_marginTop="5dp"
                                 android:layout_marginLeft="5dp"
                                 app:cardBackgroundColor="#bdbdbd"
                                 app:cardCornerRadius="20dp"
                                 android:layout_width="0dp"
-                                android:layout_height="40dp">
+                                android:layout_height="match_parent">
 
                                 <TextView
                                     android:gravity="center"
@@ -312,15 +319,16 @@
 
                             <androidx.cardview.widget.CardView
                                 android:layout_marginRight="5dp"
-                                android:layout_weight="9"
+                                android:layout_weight="5"
                                 android:layout_marginTop="5dp"
                                 android:layout_marginLeft="5dp"
                                 app:cardBackgroundColor="#bdbdbd"
                                 app:cardCornerRadius="20dp"
                                 android:layout_width="0dp"
-                                android:layout_height="40dp">
+                                android:layout_height="match_parent">
 
                                 <TextView
+                                    android:id="@+id/txtWindSpeed"
                                     android:gravity="center"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
@@ -362,13 +370,30 @@
                             android:layout_width="0dp"
                             android:layout_height="match_parent">
 
-                            <ImageView
-                                android:layout_marginLeft="15dp"
-                                android:layout_marginRight="15dp"
-                                android:src="@drawable/sunrise"
-                                android:scaleType="centerCrop"
+                            <RelativeLayout
                                 android:layout_width="match_parent"
-                                android:layout_height="match_parent"/>
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:layout_marginLeft="15dp"
+                                    android:layout_marginRight="15dp"
+                                    android:src="@drawable/sunrise"
+                                    android:scaleType="centerCrop"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"/>
+
+                                <TextView
+                                    android:id="@+id/txtSunrise"
+                                    android:layout_marginBottom="5dp"
+                                    android:textColor="#fff"
+                                    android:textSize="20sp"
+                                    android:text="Sunrise : 99:99"
+                                    android:layout_centerInParent="true"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"/>
+                            </RelativeLayout>
+
                         </androidx.cardview.widget.CardView>
 
                         <androidx.cardview.widget.CardView
@@ -379,13 +404,29 @@
                             android:layout_width="0dp"
                             android:layout_height="match_parent">
 
-                            <ImageView
-                                android:layout_marginLeft="15dp"
-                                android:layout_marginRight="15dp"
-                                android:src="@drawable/sunset"
-                                android:scaleType="centerCrop"
+                            <RelativeLayout
                                 android:layout_width="match_parent"
-                                android:layout_height="match_parent"/>
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:layout_marginLeft="15dp"
+                                    android:layout_marginRight="15dp"
+                                    android:src="@drawable/sunset"
+                                    android:scaleType="centerCrop"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"/>
+
+                                <TextView
+                                    android:id="@+id/txtSunset"
+                                    android:layout_marginBottom="5dp"
+                                    android:textColor="#fff"
+                                    android:textSize="20sp"
+                                    android:text="Sunset : 99:99"
+                                    android:layout_centerInParent="true"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"/>
+                            </RelativeLayout>
                         </androidx.cardview.widget.CardView>
                     </LinearLayout>
                 </LinearLayout>
@@ -397,7 +438,6 @@
                 android:layout_height="0dp"
                 android:layout_alignParentTop="true"
                 android:layout_centerInParent="true"
-
                 android:layout_weight="2">
 
             </androidx.recyclerview.widget.RecyclerView>
